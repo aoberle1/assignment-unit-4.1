@@ -22,30 +22,38 @@ function helloName( name ) {
 console.log( 'Hello', helloName() )
 
 // 3. Function to add two numbers together & return the result
-function addNumbers( firstNumber ) {
+// FIX - added secondNumber variable
+function addNumbers( firstNumber, secondNumber ) {
   // return firstNumber + secondNumber;
+  answer = firstNumber + secondNumber;
+  return answer;
 }
+console.log( '1 + 2 =', addNumbers( 1, 2 ) );
 
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree( ){
-
+function multiplyThree( num1, num2, num3 ){
+  answer2 = num1 * num2 * num3;
+  return answer2;
 }
+console.log( '2 * 3 * 4 =', multiplyThree( 2, 3, 4 ) );
 
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
   if ( number > 0 ){
-    return;
+    return true;
   }
-    return;
+  else ( number <= 0)
+    return false;
 }
+
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
-console.log( 'isPositive - should say true', isPositive(3) );
-console.log( 'isPositive - should say false', isPositive(0) );
-console.log( 'isPositive - should say false', isPositive(-3) );
+console.log( 'The isPositive test is a positive number - Testing Positive:', isPositive ( 1 ) );
+console.log( 'The isPositive test is a positive number - Testing Zero:', isPositive ( 0 ) );
+console.log( 'The isPositive test is a positive number - Testing Negative:', isPositive ( -1 ) );
 
 
 // 6. Function to return the _last_ item in an array. If the 
