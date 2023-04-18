@@ -42,18 +42,20 @@ console.log( '2 * 3 * 4 =', multiplyThree( 2, 3, 4 ) );
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
+  console.log( 'in isPositive' );
   if ( number > 0 ){
     return true;
   }
-  else ( number <= 0)
+  else {
     return false;
+  }
 }
 
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
-console.log( 'The isPositive test is a positive number (should say true) - Testing Positive:', isPositive ( 1 ) );
+console.log( 'The isPositive test is a positive number (should say true) - Testing 1:', isPositive ( 1 ) );
 console.log( 'The isPositive test is a positive number (should say false) - Testing Zero:', isPositive ( 0 ) );
-console.log( 'The isPositive test is a positive number (should say false) - Testing Negative:', isPositive ( -1 ) );
+console.log( 'The isPositive test is a positive number (should say false) - Testing -1:', isPositive ( -1 ) );
 
 
 // 6. Function to return the _last_ item in an array. If the 
@@ -70,7 +72,6 @@ function getLast( array ) {
     return lastItem;
   }
   else {
-    //tested testArray at empty, returned undefined
     return undefined;
   }
 }
@@ -81,10 +82,11 @@ console.log( 'The last item of the array is:', getLast() );
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 
-
 function find( value, array ){
-  for ( i=0; i <= ( findArray.length ); i++ ){
-    if ( findArray[i] == findValue ){
+  console.log( 'in find' );
+  // loop that runs through values of array
+  for ( i=0; i < ( array.length ); i++ ){
+    if ( array[i] === value ){
       return true;
       break;
     }
@@ -94,6 +96,7 @@ function find( value, array ){
   }
 }
 console.log( 'Did we find a match:', find( 3, [ 3, 6, 9, 12 ] ) );
+console.log( 'Did we find a match:', find( 2, [ 3, 6, 9, 12 ] ) );
 
 // ----------------------
 // Stretch Goals
