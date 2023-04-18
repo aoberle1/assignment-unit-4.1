@@ -66,15 +66,17 @@ function getLast( array ) {
   console.log( 'in getLast' );
   // if else statement
   if ( testArray ){
+    // setting variable lastItem equal to last item of testArray
     let lastItem = testArray[ testArray.length-1 ]
     return 'The last item in the array is', lastItem;
   }
   else {
+    //tested testArray at empty, returned undefined
     return undefined;
   }
 }
 getLast();
-console.log( getLast() );
+console.log( 'The last item of the array is:', getLast() );
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
