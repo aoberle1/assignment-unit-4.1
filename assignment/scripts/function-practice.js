@@ -15,11 +15,11 @@ console.log( hello() );
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName( name ) {
-  let user = 'Adam';
-  return user;
+  name = 'Adam';
+  return `Hello ${ name }`;
 }
 // Remember to call the function to test
-console.log( 'Hello', helloName() )
+console.log( helloName() )
 
 // 3. Function to add two numbers together & return the result
 // FIX - added secondNumber variable
@@ -51,23 +51,22 @@ function isPositive( number ) {
 
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
-console.log( 'The isPositive test is a positive number - Testing Positive:', isPositive ( 1 ) );
-console.log( 'The isPositive test is a positive number - Testing Zero:', isPositive ( 0 ) );
-console.log( 'The isPositive test is a positive number - Testing Negative:', isPositive ( -1 ) );
+console.log( 'The isPositive test is a positive number (should say true) - Testing Positive:', isPositive ( 1 ) );
+console.log( 'The isPositive test is a positive number (should say false) - Testing Zero:', isPositive ( 0 ) );
+console.log( 'The isPositive test is a positive number (should say false) - Testing Negative:', isPositive ( -1 ) );
 
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 
 // Defining array values
-let testArray = [ 1, 2, 3 ]
 function getLast( array ) {
   // console.log location testing
   console.log( 'in getLast' );
   // if else statement
-  if ( testArray ){
+  if ( array ){
     // setting variable lastItem equal to last item of testArray
-    let lastItem = testArray[ testArray.length-1 ]
+    let lastItem = array[ array.length-1 ];
     return lastItem;
   }
   else {
@@ -75,18 +74,19 @@ function getLast( array ) {
     return undefined;
   }
 }
+console.log( 'The last item of the array is:', getLast( [ 1, 2, 3 ] ) );
 console.log( 'The last item of the array is:', getLast() );
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 
-let searchArray = []
-let searchValue = []
+
 function find( value, array ){
-  for ( i=0; i <= ( searchArray.length ); i++ ){
-    if ( searchArray[i] === searchValue ){
+  for ( i=0; i <= ( findArray.length ); i++ ){
+    if ( findArray[i] == findValue ){
       return true;
+      break;
     }
     else {
       return false;
