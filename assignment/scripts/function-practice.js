@@ -68,24 +68,32 @@ function getLast( array ) {
   if ( testArray ){
     // setting variable lastItem equal to last item of testArray
     let lastItem = testArray[ testArray.length-1 ]
-    return 'The last item in the array is', lastItem;
+    return lastItem;
   }
   else {
     //tested testArray at empty, returned undefined
     return undefined;
   }
 }
-getLast();
 console.log( 'The last item of the array is:', getLast() );
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 
-findValueArray = [];
+let searchArray = []
+let searchValue = []
 function find( value, array ){
-
+  for ( i=0; i <= ( searchArray.length ); i++ ){
+    if ( searchArray[i] === searchValue ){
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
 }
+console.log( 'Did we find a match:', find( 3, [ 3, 6, 9, 12 ] ) );
 
 // ----------------------
 // Stretch Goals
