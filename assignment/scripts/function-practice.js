@@ -88,12 +88,10 @@ function find( value, array ){
   for ( i=0; i < ( array.length ); i++ ){
     if ( array[i] === value ){
       return true;
-      break;
-    }
-    else {
-      return false;
+      
     }
   }
+  return false;
 }
 console.log( 'Did we find a match:', find( 3, [ 3, 6, 9, 12 ] ) );
 console.log( 'Did we find a match:', find( 2, [ 3, 6, 9, 12 ] ) );
