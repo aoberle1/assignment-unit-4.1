@@ -65,7 +65,7 @@ console.log( 'The isPositive test is a positive number (should say false) - Test
 function getLast( array ) {
   // console.log location testing
   console.log( 'in getLast' );
-  // if else statement
+  // if else statement - if array exists
   if ( array ){
     // setting variable lastItem equal to last item of testArray
     let lastItem = array[ array.length-1 ];
@@ -101,8 +101,19 @@ console.log( 'Did we find a match:', find( 2, [ 3, 6, 9, 12 ] ) );
 // ----------------------
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
-function isFirstLetter(letter, string) {
 
+function isFirstLetter(letter, string) {
+  // For loop to run through each character of a string
+  for ( i=0; i < string.length; i++ ){
+    // if else statement for if our letter we are looking for matches a letter in string,
+    // spits back true, else spits back false, works appropriately with supplied console logs
+    if ( string[i] === letter ){
+      return true
+    }
+    else {
+      return false
+    }
+  }
 }
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
