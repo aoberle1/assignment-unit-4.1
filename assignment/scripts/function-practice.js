@@ -88,7 +88,6 @@ function find( value, array ){
   for ( i=0; i < ( array.length ); i++ ){
     if ( array[i] === value ){
       return true;
-      
     }
   }
   return false;
@@ -111,10 +110,8 @@ function isFirstLetter(letter, string) {
     if ( string.charAt(0) === letter ){
       return true
     }
-    else {
-      return false
-    }
   }
+  return false
 }
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
