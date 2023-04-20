@@ -107,6 +107,7 @@ function isFirstLetter(letter, string) {
   for ( i=0; i < string.length; i++ ){
     // if else statement for if our letter we are looking for matches a letter in string,
     // spits back true, else spits back false, works appropriately with supplied console logs
+    // Using charAt() to specify specific character
     if ( string.charAt(0) === letter ){
       return true
     }
