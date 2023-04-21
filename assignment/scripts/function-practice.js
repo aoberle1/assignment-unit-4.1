@@ -85,7 +85,7 @@ console.log( 'The last item of the empty array is:', getLast() );
 function find( value, array ){
   console.log( 'in find' );
   // loop that runs through values of array
-  for ( i=0; i < ( array.length ); i++ ){
+  for ( let i=0; i < ( array.length ); i++ ){
     if ( array[i] === value ){
       return true;
     }
@@ -104,7 +104,7 @@ console.log( 'Did we find a match:', find( 2, [ 3, 6, 9, 12 ] ) );
 function isFirstLetter(letter, string) {
   // For loop to run through each character of a string
   for ( i=0; i < string.length; i++ ){
-    // if else statement for if our letter we are looking for matches a letter in string,
+    // if statement for if our letter we are looking for matches the first letter in string,
     // spits back true, else spits back false, works appropriately with supplied console logs
     // Using charAt() to specify specific character
     if ( string.charAt(0) === letter ){
@@ -117,16 +117,36 @@ console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll( ) {
+function sumAll( array ) {
+  // establishing sum variable to use in return sum
   let sum = 0
   // TODO: loop to add items
+  // for loop that loops through all items in array
+for ( let i=0; i<array.length; i++ ){
+  //setting sum to collect input data from array
+  sum = sum + array[i];
+}
+  // return located outside for loop so for loop loops through all iterations
   return sum;
 }
+// console logging the sum of created array with sumAll
+console.log( 'The sum of the numbers in our array is:', sumAll( [ 2, 4, 6, 8 ] ) );
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-
+function returnPositive ( array ){
+  let positiveArray = [];
+  for ( let i = 0; i < array.length; i++ ){
+    if ( array[i] > 0 ){
+      positiveArray.push( array[i] );
+    }
+  }
+  // return inside returnPositive function but outside for loop
+  return positiveArray;
+}
+// running returnPositive function
+console.log( 'The postive values of the array are:', returnPositive ( [-1, 1, 4, -4] ) );
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
