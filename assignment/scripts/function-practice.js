@@ -15,6 +15,7 @@ console.log( hello() );
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName( name ) {
+  // code won't run with let name, any idea why?
   name = 'Adam';
   return `Hello ${ name }`;
 }
@@ -25,7 +26,7 @@ console.log( helloName() )
 // FIX - added secondNumber variable
 function addNumbers( firstNumber, secondNumber ) {
   // return firstNumber + secondNumber;
-  answer = firstNumber + secondNumber;
+  let answer = firstNumber + secondNumber;
   return answer;
 }
 console.log( '1 + 2 =', addNumbers( 1, 2 ) );
@@ -33,7 +34,7 @@ console.log( '1 + 2 =', addNumbers( 1, 2 ) );
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree( num1, num2, num3 ){
-  answer2 = num1 * num2 * num3;
+  let answer2 = num1 * num2 * num3;
   return answer2;
 }
 console.log( '2 * 3 * 4 =', multiplyThree( 2, 3, 4 ) );
@@ -103,7 +104,7 @@ console.log( 'Did we find a match:', find( 2, [ 3, 6, 9, 12 ] ) );
 
 function isFirstLetter(letter, string) {
   // For loop to run through each character of a string
-  for ( i=0; i < string.length; i++ ){
+  for ( let i=0; i < string.length; i++ ){
     // if statement for if our letter we are looking for matches the first letter in string,
     // spits back true, else spits back false, works appropriately with supplied console logs
     // Using charAt() to specify specific character
